@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="employee")
-public class Employee {
+public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -12,11 +12,11 @@ public class Employee {
     private String lastName;
     private String email;
 
-    public Employee() {
+    public Vehicle() {
 
     }
 
-    public Employee(int id, String firstName, String lastName, String email) {
+    public Vehicle(int id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -57,7 +57,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Vehicle{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
