@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Save Car to database</title>
+</head>
+
+<body>
+<div class="container">
+    <h3>Vehicle Directory</h3>
+    <hr>
+    <p class="h4 mb-4">Save Vehicle</p>
+    <form action="#" th:action="@{/save}"
+                     th:object="${vehicle}" method="POST">
+
+        <td>Marka pojazdu:</td>
+        <input th:field="*{brand}" class="form-control mb-0 col-4"/><br />
+        <td>Rok produkcji pojazdu</td>
+        <input th:field="*{year}" class="form-control mb-0 col-4" /><br />
+        <td>Pojemnosc silnika</td>
+        <input th:field="*{engineCapacity}" class="form-control mb-0 col-4" /><br />
+        <td>Podaj wartosc KW pojazdu</td>
+        <input th:field="*{kw}" class="form-control mb-0 col-4" /><br />
+        <td>Numer VIN Pojazdu</td>
+        <input th:field="*{numberVin}" class="form-control mb-0 col-4" /><br />
+        <td>Opis usterki pojazdu, zgloszonej przez klienta</td>
+        <input th:field="*{malfunctionDescription}" class="form-control mb-0 col-4" /><br />
+        <button type="submit" class="btn btn-info btn-sm ml-3 mr-1">Save</button>
+        <a th:href="@{/vehicles/list}" class="btn btn-info btn-sm ml-3 mr-1">Back to car list</a>
+
+    </form>
+
+
+</div>
+
+</body>
+</html>
