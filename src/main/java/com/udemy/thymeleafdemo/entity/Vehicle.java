@@ -3,24 +3,38 @@ package com.udemy.thymeleafdemo.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="employee")
+@Table(name = "vehicle")
 public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private String brand;
+    private String kw;
+    private String year;
+    private double engineCapacity;
+    private String numberVin;
+    private String malfunctionDescription;
 
     public Vehicle() {
 
     }
 
-    public Vehicle(int id, String firstName, String lastName, String email) {
+    public Vehicle(int id, String brand, String kw, String year, double engineCapacity, String numberVin, String malfunctionDescription) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+        this.brand = brand;
+        this.kw = kw;
+        this.year = year;
+        this.engineCapacity = engineCapacity;
+        this.numberVin = numberVin;
+        this.malfunctionDescription = malfunctionDescription;
+    }
+
+    public String getMalfunctionDescription() {
+        return malfunctionDescription;
+    }
+
+    public void setMalfunctionDescription(String malfunctionDescription) {
+        this.malfunctionDescription = malfunctionDescription;
     }
 
     public int getId() {
@@ -31,37 +45,55 @@ public class Vehicle {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getKw() {
+        return kw;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setKw(String kw) {
+        this.kw = kw;
     }
 
-    public String getEmail() {
-        return email;
+    public String getYear() {
+        return year;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public double getEngineCapacity() {
+        return engineCapacity;
+    }
+
+    public void setEngineCapacity(double engineCapacity) {
+        this.engineCapacity = engineCapacity;
+    }
+
+    public String getNumberVin() {
+        return numberVin;
+    }
+
+    public void setNumberVin(String numberVin) {
+        this.numberVin = numberVin;
     }
 
     @Override
     public String toString() {
         return "Vehicle{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
+                ", brand='" + brand + '\'' +
+                ", kw='" + kw + '\'' +
+                ", year='" + year + '\'' +
+                ", engineCapacity=" + engineCapacity +
+                ", numberVin='" + numberVin + '\'' +
                 '}';
     }
 }

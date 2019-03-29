@@ -9,23 +9,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Employee list</title>
+    <title>Vehicle list</title>
 </head>
 <div>
 <div></div>
-    <h3>Employee Directory</h3>
+    <h3>Vehicle Directory</h3>
 <hr>
 <table class="table table-border table-striped">
     <thead class="thead-dark">
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Email</th>
+    <th>id</th>
+    <th>Brand</th>
+    <th>KW</th>
+    <th>Year</th>
+    <th>Engine Capacity</th>
+    <th>VIN Number</th>
+    <th>Malfunction</th>
     </thead>
     <tbody>
-    <tr th:each="tempEmployee : ${employees}">
-    <td th:text="${tempEmployee.firstName}"/>
-        <td th:text="${tempEmployee.lastName}"/>
-        <td th:text="${tempEmployee.email}"/>
+    <tr th:each="tempVehicle : ${vehicles}">
+    <td th:text="${tempVehicle.id}"/>
+        <td th:text="${tempVehicle.brand}"/>
+        <td th:text="${tempVehicle.kw}"/>
+        <td th:text="${tempVehicle.year}"/>
+        <td th:text="${tempVehicle.engineCapacity}"/>
+        <td th:text="${tempVehicle.numberVin}"/>
+        <td th:text="${tempVehicle.malfunctionDescription}"/>
     </tr>
     </tbody>
 </table>
