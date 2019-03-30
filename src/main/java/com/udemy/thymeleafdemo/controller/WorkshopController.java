@@ -54,7 +54,7 @@ public class WorkshopController {
             return "vehicles/vehicle-form";
         else {
             vehicleService.save(vehicle);
-            return "redirect:/vehicles/list-vehicles";
+            return "redirect:/vehicles/list";
         }
     }
 }
